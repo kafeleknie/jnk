@@ -1,0 +1,19 @@
+<div class="container">
+  <button
+    [disabled]="currentComponent == 1"
+    (click)="sendEvent(1)"
+    class="left"
+  >
+    <b>Converter</b>
+  </button>
+  <button [disabled]="currentComponent == 2" (click)="sendEvent(2)">
+    <b>Table</b>
+  </button>
+  <button
+    [disabled]="currentComponent == 3"
+    (click)="sendEvent(3)"
+    class="right"
+  >
+    <b>Graphs</b>
+  </button>
+</div>

@@ -1,0 +1,19 @@
+<b>Base : 1 USD</b>
+<hr />
+<div class="container">
+  <div class="column l">
+    <h3>-</h3>
+  </div>
+
+  <div class="column l" *ngFor="let item of dates">
+    <h3>{{ item.toISOString().slice(0, 10) }}</h3>
+  </div>
+
+  <div class="column l r"><h3>last month change</h3></div>
+</div>
+
+<hr />
+<ng-container *ngFor="let item of rates">
+  <app-row [row]="item"></app-row>
+  <hr />
+</ng-container>

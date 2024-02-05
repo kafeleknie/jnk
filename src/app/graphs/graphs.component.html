@@ -1,0 +1,18 @@
+<div class="container">
+  <mat-form-field>
+    <mat-label>Currency</mat-label>
+    <mat-select (valueChange)="valueChanged($event)">
+      <mat-option *ngFor="let name of names; let i = index" [value]="i">{{
+        name
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <canvasjs-chart
+    [options]="chartOptions"
+    [styles]="{ width: '100%', height: 'auto' }"
+    (chartInstance)="getChartInstance($event)"
+  ></canvasjs-chart>
+
+  <div></div>
+</div>

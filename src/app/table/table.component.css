@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  display: flex;
+}
+
+.column {
+  text-align: center;
+  width: 7.14%;
+}
+.l {
+  border-left: solid 1px white;
+}
+
+.r {
+  border-right: solid 1px white;
+}

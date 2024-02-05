@@ -1,0 +1,25 @@
+<ng-container *ngIf="!ready"><h1>Loading data...</h1> </ng-container>
+
+<ng-container *ngIf="ready">
+  <app-menu (componentChanged)="currentComponent = $event"></app-menu>
+  <hr />
+  <app-converter
+    *ngIf="currentComponent === 1"
+    [names]="names"
+    [rates]="dataForConverter"
+  ></app-converter>
+
+  <app-table
+    *ngIf="currentComponent === 2"
+    [rates]="data"
+    [dates]="dates"
+  ></app-table>
+
+  <app-graphs
+    *ngIf="currentComponent === 3"
+    (getRates)="currentIndex = $event"
+    [names]="names"
+    [rates]="currentIndex != null ? data[currentIndex]['rate'] : false"
+    [dates]="dates"
+  ></app-graphs>
+</ng-container>

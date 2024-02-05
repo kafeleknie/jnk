@@ -1,0 +1,23 @@
+<div class="container">
+  <mat-form-field>
+    <mat-label>From</mat-label>
+    <mat-select (valueChange)="From = $event" [value]="From">
+      <mat-option *ngFor="let name of names" [value]="name">{{
+        name
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <input [(ngModel)]="value" />
+
+  <input disabled [value]="(1 / rates[From]) * rates[To] * value" />
+
+  <mat-form-field>
+    <mat-label>To</mat-label>
+    <mat-select (valueChange)="To = $event" [value]="To">
+      <mat-option *ngFor="let name of names" [value]="name">{{
+        name
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

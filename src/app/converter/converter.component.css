@@ -1,0 +1,15 @@
+mat-form-field {
+  width: 10%;
+}
+
+input {
+  width: 40%;
+}
+input:disabled {
+  width: 40%;
+  color: white;
+}
+
+.container {
+  display: flex;
+}

@@ -1,0 +1,32 @@
+button {
+  width: 33%;
+  height: 60px;
+  text-align: center;
+  background-color: #c2bdbd;
+  border: none;
+  margin: 1px;
+}
+
+button:hover:not([disabled]) {
+  background-color: #918e8e;
+}
+
+button:disabled {
+  background-color: #918e8e;
+}
+
+.left {
+  border-top-left-radius: 40px 40px;
+  border-bottom-left-radius: 40px 40px;
+}
+
+.right {
+  border-top-right-radius: 40px 40px;
+  border-bottom-right-radius: 40px 40px;
+}
+
+.container {
+  width: 80%;
+  margin-top: 5px;
+  margin-left: 10%;
+}

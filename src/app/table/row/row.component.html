@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="column l">
+    <h3>{{ row["name"] }}</h3>
+  </div>
+  <div class="column l" *ngFor="let item of row['rate']">
+    <p>{{ (item * 1).toFixed(5) * 1 }}</p>
+  </div>
+  <div
+    class="column l r"
+    [ngStyle]="
+      this.change > 0
+        ? { color: 'green' }
+        : this.change < 0
+        ? { color: 'red' }
+        : { color: 'grey' }
+    "
+  >
+    <h3>{{ change }}%</h3>
+  </div>
+</div>
